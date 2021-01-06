@@ -1,3 +1,4 @@
+<?php include('server.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,13 @@
             <button class="btn" type="submit" name="save">Done</button>
         </div>
     </form>
-
 </body>
+<?php if(isset($_SESSION['message'])) :?>
+    <div class="msg">
+        <?php
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            ?>
+    </div>
+<?php endif ?>
 </html>
