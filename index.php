@@ -8,6 +8,31 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+    <?php $results = mysqli_query($db, "SELECT * FROM task");?> // view list
+    <table>
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Description</th>
+                <th colspan="2">Action</th>
+            </tr>
+        </thead>
+
+        <?php while ($row = mysqli_fetch_array($results)){ ?>
+            <tr>
+                <td><?php echo $row['taskname']; ?></td>
+                <td><?php echo $row['taskdescription']; ?></td>
+                <td>
+                    <a href="index.php?edit=<?php echo $row['id']; ?>" class="edit_btn" > Edit</a>
+                </td>
+                <td>
+                <a href="server.php?del=<?php echo $row['id']; ?>" class="del_btn">Delete</a>
+                </td>
+
+            </tr>
+        <?php } ?>
+    </table>
     <form method="post" action="server.php">
         <div class="input-group">
             <label>Task</label>
