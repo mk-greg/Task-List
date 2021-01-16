@@ -56,7 +56,7 @@ form{
 .edit_btn{
     text-decoration: none;
     padding: 2px 5px;
-    background: #2E8B57;
+    background: #70af85;
     color:white;
     border-radius: 3px;
 }
@@ -65,15 +65,15 @@ form{
     padding: 2px 5px;
     color:white;
     border-radius: 3px;
-    background: #800000;
+    background: #ee9595;
 }
 .msg{
     margin:30px auto;
     padding: 10px;
     border-radius: 5px;
-    colorL #3c763d;
-    background: #3c763d;
-    border: 1px solid #3c763d;
+    colorL #96bb7c;
+    background: #96bb7c;
+    border: 1px solid #96bb7c;
     width: 50%;
     text-align: center;
 }

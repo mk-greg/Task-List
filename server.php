@@ -17,6 +17,7 @@
         header('location: index.php');
     }
 
+    $results = mysqli_query($db, "SELECT * FROM task");
     
 
 ?>
